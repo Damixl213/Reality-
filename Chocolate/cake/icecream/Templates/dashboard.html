@@ -1,0 +1,207 @@
+{% extends 'layouts/base_layout.html' %}
+{% load static %}
+ {% block body-content %}
+
+  {% if freelancer_exist %}
+        <main>
+          <div class="insights">
+            <div class="sales">
+              <span><i class="fa-solid fa-chart-pie"></i></span>
+              <div class="middle">
+                <div class="left">
+                  <h3>Total income</h3>
+                  <h1>NGN{{ freelancer.balance }}</h1>  
+                </div>
+                <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36" class="one" ></circle>
+                </svg>
+                <div class="number">
+                  <p>100%</p>
+                </div>
+              </div>
+              </div>
+              <small class="text-muted">Last 24hr</small>
+            </div>
+            <!-- END OF THE Sales  -->
+            <div class="profite">
+              <span><i class="fa-solid fa-money-bill-trend-up"></i></span>
+              <div class="middle">
+                <div class="left">
+                  <h3>Total profite</h3>
+                  <h1>$99</h1>  
+                </div>
+                <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36" class="two" ></circle>
+                </svg>
+                <div class="number">
+                  <p>99%</p>
+                </div>
+              </div>
+              </div>
+              <small class="text-muted">Last 24hr</small>
+            </div>
+            <!-- END OF THE PROFIT  -->
+            <div class="rate">
+              <span><i class="fa-solid fa-money-bill-transfer"></i></span>
+              <div class="middle">
+                <div class="left">
+                  <h3>Interest </h3>
+                  <h1>10%</h1>  
+                </div>
+                <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36" class="three" ></circle>
+                </svg>
+                <div class="number">
+                  <p>1%</p>
+                </div>
+              </div>
+              </div>
+              <small class="text-muted">Last 24hr</small>
+            </div>
+            <!-- END OF THE INTEREST  -->
+          </div>
+          <div class="apply">
+           
+            <h2>Apply for Other Jobs</h2>
+          
+          <table>
+            <thead>
+              <tr>
+                <th>Company name</th>
+                <th>Post</th>
+                <th>Salary</th>
+                <th>Status</th>
+                <th>Apply</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for job in Jobs %}
+             <tr>
+              <td>{{ job.company}}</td>
+              <td>{{ job.title }}</td>
+              <td>{{ job.balance }}</td>
+              <td><a href="#">requirment</a></td>
+              <td><button>Apply</button></td>
+            </tr>
+            {% endfor %}
+          </table>
+          <a href="#">More</a>
+          
+        </div>
+      </main>
+      <!-- done next is the right part  -->
+    <div class="right">
+        <div class="top"> 
+        <button id="menu-btn">
+      <i class="fa-solid fa-bars"></i> 
+      </button>
+      <div class="theme-toggler">
+        <span class="Sun"><i class="fa-regular fa-sun"></i></span>
+        <span class="moon" style="display: none;"><i class="fa-regular fa-moon"></i></span>
+      </div>
+      <div class="profile">
+        <div class="info">
+          <p>Hey <b>{{ freelancer.username }}</b></p>
+          <small class="text-muted">Admin</small>
+        </div>
+        <div class="profile-photo">
+        </div>
+      </div>
+        </div>
+      <div class="update-recent">
+        <h1>Recent Update</h1>
+        <div class="updates">
+          <div class="update">
+          <div class="profile-photo">
+            <img src="{% static '/image/blessing.jpg' %}">
+          </div>
+          {% for freelance in freelancer %} 
+          <div class="message">
+            <p><b>{{ freelance.user.username }}</b> want to join you  with the project</p>
+            <small class="text-muted">1 minutes ago</small>
+          </div>
+        </div>
+          <div class="update">
+          <div class="profile-photo">
+           <img src="{% static '/image/blessing.jpg' %}">
+          </div>
+           {% endfor %}
+        </div>
+        
+        <div class="sales-analytics">
+      <h2> Sales Analytics</h2>
+      <div class="item-online">
+        <div class="icon-1">
+          <i class="fa-solid fa-calendar-days"></i>
+        </div>
+        <div class="right">
+          <div class="info">
+            <h3>Your deadline</h3>
+          </div>
+          <H5 class="danger">9-20-2024</H5>
+          <h3>Fill out your form to get started !</h3>
+        </div>
+      </div>
+      <div class="item-online">
+        <div class="icon-2">
+          <i class="fa-solid fa-calendar-days"></i>
+        </div>
+        <div class="right">
+          <div class="info">
+            <h3>Let collaborate</h3>
+            <small> 9-20-2024</small>
+          </div>
+          <H5 style="color: #41f1b6;">+1 point</H5>
+          <h3>Fill out your form to get started !</h3>
+        </div>
+      </div>
+      <div class="item-online">
+        <div class="icon-3">
+          <i class="fa-solid fa-calendar-days"></i>
+        </div>
+        <div class="right">
+          <div class="info">
+            <h3>Your deadline</h3>
+            <small> 9-20-2024</small>
+          </div>
+          <H5 class="danger">9-20-2024</H5>
+          <h3>Fill out your form to get started !</h3>
+        </div>
+      </div>
+      <div class="add-product">
+        <br>
+        <br>
+        <div class="right">
+            <form method="POST" action="{% url 'user-dashboard' %}" enctype="multipart/form-data">
+              <div class="add-resume"></div>
+              <label for="file"></label>
+              <input type="file" name="file" id="file">
+              <br> <br>
+              <h3>Add Your resume</h3>
+            </div>
+            <button type="submit">Upload 
+              <i class="fa-solid fa-plus"></i></button> 
+          </form>
+          
+        </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    {% else %}  
+        <div class="row"> 
+          <div class="col-12">
+              <h2>KYC Details not set 😥</h2>
+              <p>Your account is  restricted in activity.. you have  to set your Nin details 
+                  <a href="{% url 'register' %}">Become a Freelancer</a>
+              </p>
+          </div>
+        </div> 
+      {% endif %}
+</body>
+<script src="../Js/dashboard.js"></script>
+</html>           
+{% endblock %}     

@@ -1,0 +1,210 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="icon" type="image/png" sizes="100PX" href="{% static '/image/WORLD.png' %}">
+  <link rel="stylesheet" href="{% static '/CSS/landing.css'  %}">
+  <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css'  %}" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <nav>
+      <ul class="navbar">
+        <li><a href="#home'">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#trustees">Board of Trustees</a></li>
+        <li><a href="#jobs">Job Listings</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'signup' %}">Signup</a></li>
+      </ul>
+    </nav>
+    <div class="header-content">
+      <h1>Welcome to Reality</h1>
+      <p>Your success is our priority. We offer top-notch services to meet your business needs.</p>
+      <a href="#services" class="btn-primary">Explore Services</a>
+    </div>
+  </header>
+
+  <!-- About Us Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p class="p1">Reality is a cutting-edge freelancing platform designed to simplify the process of job hunting and career development. Our platform connects skilled professionals with a wide range of employers and businesses in need of talent, offering a seamless user experience. With a strong focus on accessibility, ease of use, and efficiency, Reality enables freelancers to browse job listings, apply for opportunities, and secure contracts with just a click of a button. Whether you're looking for part-time gigs, full-time remote work, or project-based assignments, Reality is the ultimate solution to kickstart your freelancing journey. <img src="{% static '/image/3.png' %}" alt="study" height="100%" width="100%"  data-aos="fade-up" x></p>
+      <p class="p2">Reality was founded by Oluwadamilola Oyeyipo, a visionary leader and tech entrepreneur who serves as the CEO of the company. Oluwadamilola’s passion for technology and entrepreneurship is rooted in his belief that freelancing should be simple, stress-free, and rewarding for everyone. With a background in software engineering and hands-on experience in web development, he envisioned Reality as a platform where professionals can thrive in a flexible work environment. Under his leadership, Reality has grown to become a trusted name in the freelancing world, providing opportunities for thousands of freelancers worldwide to achieve their career goals. <img src="{% static '/image/34525.jpg' %}" height="100%" width="100%" data-aos="fade-down" alt="" ></p>
+      <p class="p1">Founded in August 2024, Reality was established to bridge the gap between freelancers and companies, ensuring both sides have access to the tools they need to succeed. At Reality, we understand the challenges freelancers face when searching for reliable work and navigating complex platforms. That’s why we designed Reality to offer stress-free job applications, transparent communication with potential employers, and the freedom to work on your own terms. Our mission is to make freelancing not just a career option, but an empowering and flexible lifestyle. <img src="{% static  '/image/Friends.jpg' %}" alt="" height="100%" width="100%" data-aos="fade-right">   </p>
+      <p class="p2">Our core values at Reality center around innovation, simplicity, and user empowerment. We aim to continuously evolve our platform to meet the ever-changing demands of the freelance workforce while providing a user-friendly interface that prioritizes functionality and user satisfaction. We are committed to creating a supportive ecosystem where freelancers can build their portfolios, develop meaningful client relationships, and enjoy a stress-free career path. As we move forward, Reality remains dedicated to making freelancing as easy and accessible as possible for all. <img src="{% static '/image/Hotelpool.avif' %}" alt="" height="100%" width="100%" data-aos="fade-left"></p> 
+
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container" data-aos="fade-left">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Web Development</h3>
+          <p>We build responsive, modern websites that elevate your brand's online presence.</p>
+        </div>
+        <div class="service-card">
+          <h3>SEO Optimization</h3>
+          <p>Improve your search rankings with our proven SEO strategies.</p>
+        </div>
+        <div class="service-card">
+          <h3>Digital Marketing</h3>
+          <p>We craft compelling digital campaigns to help your business grow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+ 
+  <section id="testimonials" class="testimonials-section">
+    
+    <div class="container" >
+      <h2>What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-left">
+          <p>"The best service I have ever experienced. They transformed my business in ways I never imagined."</p>
+          <span>- Client 1</span>
+        </div>
+        <div class="testimonial-card" data-aos="fade-left" data-aos-duration="500">
+          <p>"Amazing results. Professional team with outstanding communication."</p>
+          <span>- Client 2</span>
+        </div>
+        <div class="testimonial-card"  data-aos="fade-left" data-aos-duration="500">
+          <p>"Highly recommend their services. They go above and beyond for their clients."</p>
+          <span>- Client 3</span>
+        </div>
+      </div>
+     
+    </div>
+  
+  </section>
+
+  <!-- Board of Trustees Section -->
+  <section id="trustees" class="trustees-section">
+    <div class="container">
+      <h2>Board of Trustees</h2>
+      <div class="trustees-grid">
+        <div class="trustee-card" data-aos="fade-up" data-aos-duration="1500">
+          <img src="{% static 'image/female.jpeg' %} " alt="Trustee 1" class="trustee-photo">
+          <h3>John Doe</h3>
+          <p>Chairman</p>
+        </div>
+        <div class="trustee-card" data-aos="fade-down" data-aos-duration="1500">
+          <img src=" {% static '/image/male.jpeg'  %}" alt="Trustee 2" class="trustee-photo">
+          <h3>Jane Smith</h3>
+          <p>Vice Chairman</p>
+          
+        </div>
+        <div class="trustee-card" data-aos="fade-up" data-aos-duration="1500">
+          <img src="{% static '/image/Blog — Jasper & Fern.jpeg' %}" alt="Trustee 3" class="trustee-photo">
+          <h3>Michael Johnson</h3>
+          <p>Trustee</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sliding Job Listings Section -->
+  <section id="jobs" class="jobs-section">
+    <div class="container">
+      <h2>Job Listings</h2>
+      <div class="job-slider">
+        <div class="job-slide">
+          <h3>Frontend Developer</h3>
+          <p>Location: Lagos, Nigeria</p>
+          <p>Experience: 2-4 years</p>
+        </div>
+        <div class="job-slide">
+          <h3>Backend Developer</h3>
+          <p>Location: Abuja, Nigeria</p>
+          <p>Experience: 3-5 years</p>
+        </div>
+        <div class="job-slide">
+          <h3>UX/UI Designer</h3>
+          <p>Location: Remote</p>
+          <p>Experience: 1-3 years</p>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="#" class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Map Section (New Section) -->
+  <section id="map" class="map-section">
+    <div class="container">
+      <h2>Our Location</h2>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3815889209113!2d3.3374745354728415!3d6.5994090223122415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9227a35ce52b%3A0x7dbc71c1b6b0a5a4!2sCophild%20IT%20Training%20%26%20Test%20Centre!5e0!3m2!1sen!2sng!4v1727357245992!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2024 Reality. All Rights Reserved.</p>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.job-slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+       slide.style.display = (i === index) ? 'block' : 'none';
+        
+      });
+    }
+
+    function nextSlide() {
+      slideIndex = (slideIndex + 1) % slides.length;
+      showSlide(slideIndex);
+      
+    }
+
+    function prevSlide() {
+      slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    // Initialize slider
+    showSlide(slideIndex);
+  </script>
+
+</body>
+</html>

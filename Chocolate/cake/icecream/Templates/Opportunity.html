@@ -1,0 +1,54 @@
+{% extends 'layouts/base_layout.html' %}
+<body>
+<div class="container">
+{% block body-content%}
+    <main>
+  <div class="apply">
+        <table>
+          <thead>
+            <tr>
+              <th>Company name</th>
+              <th>Post</th>
+              <th>Salary</th>
+              <th>Status</th>
+              <th>Apply</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+             {% for job in Jobs %}   
+              <td>{{ job.company}}</td>
+              <td>{{ job.title }}</td>
+              <td>{{ job.balance }}</td>
+              <td><a href="#">requirment</a></td>
+              <td><button>Apply</button></td>
+            </tr>
+             {% endfor %}
+        </table>
+        
+        <a href="#" >show less</a>
+      </div>
+    </main>
+    <!-- done next is the right part  -->
+   <div class="right">
+      <div class="top"> 
+      <button id="menu-btn">
+     <i class="fa-solid fa-bars"></i> 
+     </button>
+     <div class="theme-toggler">
+      <span class="Sun"><i class="fa-regular fa-sun"></i></span>
+      <span class="moon" style="display: none;"><i class="fa-regular fa-moon"></i></span>
+     </div>
+     <div class="profile">
+      <div class="info">
+        <small class="text-muted">Admin</small>
+      </div>
+      <div class="profile-photo">
+        <img src="../image/blessing.jpg" alt="">
+      </div>
+     </div>
+      </div>
+   {% endblock %}  
+</body>
+<script src="../Js/dashboard.js"></script>
+</html>

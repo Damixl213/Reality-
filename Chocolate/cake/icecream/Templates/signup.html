@@ -1,0 +1,55 @@
+{%  load static  %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link rel="icon" type="image/png" sizes="100PX" href="{% static '/image/WORLD.png' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{% static '/CSS/signup.css'  %}">
+</head>
+<body>
+  
+  <div class="container">
+  </div>
+    <div class="register-card">
+      <h2>Registration</h2>
+      <form method='POST' >
+        {% csrf_token %}
+
+        <div class="input-group">
+          <label for="User">UserName</label>
+          <input type="text" placeholder="Enter user Name" name="username">
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" placeholder="Enter Email" name="email">
+        </div>
+        
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password"  placeholder="Enter Password" name="password">
+          
+        </div>
+
+        <div class="input-group">
+          <label for="password">Confirm password</label>
+          <input type="password"  placeholder="Confirm password" name="cpassword">
+        </div>
+       <input type="submit" value="Signup">
+      </form>
+      <div class="theme-toggle">
+        <label for="theme-switch">Toggle Theme</label>
+        <input type="checkbox" id="theme-switch">
+        <h5>If you have an account <a href="{% url 'login' %}">login</a></h5>
+      </div>
+      <h1>
+      {{ request.message }}
+    </h1>
+    </div>
+  </div>
+</body>
+</html>

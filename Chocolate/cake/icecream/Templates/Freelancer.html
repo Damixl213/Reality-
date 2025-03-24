@@ -1,0 +1,71 @@
+{%  load static  %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link rel="icon" type="image/png" sizes="100PX" href="{% static '/image/WORLD.png' %}">
+<link rel="stylesheet" href="{% static  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css' %}" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{% static '/CSS/signup.css'  %}">
+</head>
+<body>
+
+  <div class="container">
+    {% if error %}
+    <div class="top">
+      <h5 style="color: red;">{{ error }}</h5>
+    </div>
+    {% endif %}
+
+    <div class="register-card">
+      <h2>Registration</h2>
+
+      <form action=""  method='post' >
+        {% csrf_token %}
+        
+        <div class="input-group">
+          <label for="first-name">First Name</label>
+          <input type="text"placeholder="Enter First Name" name="first-name">
+        </div>
+
+        <div class="input-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" placeholder="Enter Last Name" name="last-name">
+
+        </div>
+        
+        
+
+        <div class="input-group">
+          <label for="country">Country</label>
+          <input type="text" placeholder="Enter Country" name="Country">
+        </div>
+
+        <div class="input-group">
+          <label for="state">State</label>
+          <input type="text" placeholder="Enter State " name="state">
+          
+        </div>
+
+        <div class="input-group">
+          <label for="skill">Qualification</label>
+          <input type="text"  placeholder="Enter Qualification"  name="skills">
+        </div>
+       
+         <input type="submit"  value="Sumbmit">
+      </form>
+    <div class="theme-toggle">
+        <label for="theme-switch">Dark mode</label>
+        <input type="checkbox" id="theme-switch">
+      </div>
+      <h1>
+      {{ request.message }}
+    </h1>
+    </div>
+  </div>
+
+  <script src="{% static '/Js/Login.js' %}"></script>
+</body>
+</html>

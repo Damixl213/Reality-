@@ -1,0 +1,165 @@
+{% extends 'layouts/base_layout.html' %}
+ {% block title %}
+ User Payments
+ {% endblock %}
+
+ {%block body-content %} 
+<body>
+  <div class="container">
+    <main>
+      <h1>Dashboard</h1>
+        <div class="date">
+        <input type="date">
+       </div>
+        <div class="insights">
+          <div class="sales">
+            <span><i class="fa-solid fa-chart-pie"></i></span>
+            <div class="middle">
+              <div class="left">
+                <h3>Total income</h3>
+                <h1></h1>  
+              </div>
+              <div class="progress">
+              <svg>
+                <circle cx="38" cy="38" r="36" class="one" ></circle>
+              </svg>
+              <div class="number">
+                <p>100%</p>
+              </div>
+            </div>
+            </div>
+            <small class="text-muted">Last 24hr</small>
+          </div>
+          <!-- END OF THE Sales  -->
+          <div class="profite">
+            <span><i class="fa-solid fa-money-bill-trend-up"></i></span>
+            <div class="middle">
+              <div class="left">
+                <h3>Total profite</h3>
+                <h1>$99</h1>  
+              </div>
+              <div class="progress">
+              <svg>
+                <circle cx="38" cy="38" r="36" class="two" ></circle>
+              </svg>
+              <div class="number">
+                <p>99%</p>
+              </div>
+            </div>
+            </div>
+            <small class="text-muted">Last 24hr</small>
+          </div>
+          <!-- END OF THE PROFIT  -->
+          <div class="rate">
+            <span><i class="fa-solid fa-money-bill-transfer"></i></span>
+            <div class="middle">
+              <div class="left">
+                <h3>Interest </h3>
+                <h1>$1</h1>  
+              </div>
+              <div class="progress">
+              <svg>
+                <circle cx="38" cy="38" r="36" class="three" ></circle>
+              </svg>
+              <div class="number">
+                <p>1%</p>
+              </div>
+            </div>
+            </div>
+            <small class="text-muted">Last 24hr</small>
+          </div>
+          <!-- END OF THE INTEREST  -->
+        </div>
+        <div class="apply">
+          <h2>Apply for Other Jobs</h2>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Amount earned</th>
+              <th> main salary</th>
+              <th> point</th>
+              <th>Job</th>
+              <th>feed back</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1000</td>
+              <td>1500</td>
+              <td>+2 stars</td>
+              <td><a href="#">Google</a></td>
+              <td><button href="">feedback</button></td>
+            </tr>
+          </tbody> 
+        </table>
+        <a href="#">More</a>
+      </div>
+    </main>
+    <!-- done next is the right part  -->
+   <div class="right">
+      <div class="top"> 
+      <button id="menu-btn">
+     <i class="fa-solid fa-bars"></i> 
+     </button>
+     <div class="theme-toggler">
+      <span class="Sun"><i class="fa-regular fa-sun"></i></span>
+      <span class="moon" style="display: none;"><i class="fa-regular fa-moon"></i></span>
+     </div>
+     <div class="profile">
+      <div class="info">
+        <p>Hey <b>David</b></p>
+        <small class="text-muted">Admin</small>
+      </div>
+      <div class="profile-photo">
+        <img src="../image/blessing.jpg" alt="">
+      </div>
+     </div>
+      </div>
+     <div class="update-recent">
+      <h1>Recent Update</h1>
+      <div class="updates">
+        <div class="update">
+        <div class="profile-photo">
+          <img src="../image/blessing.jpg">
+        </div>
+        <div class="message">
+          <p><b>Alex John</b> want to join you  with the project</p>
+          <small class="text-muted">1 minutes ago</small>
+        </div>
+      </div>
+        <div class="update">
+        <div class="profile-photo">
+          <img src="../image/blessing.jpg">
+        </div>
+        <div class="message">
+          <p><b>Alex John</b> want to join you with the project </p>
+          <small class="text-muted">1 minutes ago</small>
+        </div>
+      </div>
+        <div class="update">
+        <div class="profile-photo">
+          <img src="../image/blessing.jpg">
+        </div>
+        <div class="message">
+          <p><b>Alex John </b>want to join you  with the project </p>
+          <small class="text-muted">1 minutes ago</small>
+        </div>
+      </div>
+        <div class="update">
+        <div class="profile-photo">
+          <img src="../image/blessing.jpg">
+        </div>
+        <div class="message">
+          <p><b>Alex John </b> want to join you  with the project</p>
+          <small class="text-muted">1 minutes ago</small>
+        </div>
+      </div>
+     </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../Js/dashboard.js"></script>
+</html>

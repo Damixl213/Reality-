@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="{% static '/CSS/Login.css' %}">
+  <link rel="icon" type="image/png" sizes="100PX" href="{% static '/image/WORLD.png' %}">
+</head>
+<body>
+
+  <div class="container">
+    <div class="login-card">
+      <h2>Login</h2>
+      <form  method='POST'>
+       {% csrf_token %}
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text"  placeholder="Enter Username" name="username">
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password"  placeholder="Enter Password" name="password">
+        </div>
+        <button class="btn" type="submit">Login</button>
+      </form>
+      <div class="theme-toggle">
+        <label for="theme-switch">Toggle Theme</label>
+        <input type="checkbox" id="theme-switch">
+        <h5>If you don't have and account <a href="{% url 'user-dashboard' %}">Signup</a></h5>
+      </div>
+      {% if errormessage %}
+      <p>{{errormessage}} </p>
+  {% endif %}
+    </div>
+
+  </div>
+
+  <script src="{% static '/Js/Login.js' %}"></script>
+</body>
+</html>

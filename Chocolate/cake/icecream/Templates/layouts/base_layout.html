@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="100PX" href="{% static '/image/WORLD.png' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{% static '/CSS/dashboard.css' %}">
+  <title>Dashboard</title>
+{% block css-design %}
+</head>
+<body>
+<div class="container">
+  <aside>
+    <div class="top">
+      <div class="logo">
+         <img src="{% static '/image/WORLD.png' %}" style="border-radius:52px;" alt="">
+         <H2><span style="color: #2438cd">REA</span>LITY</H2>
+      </div>
+      <div class="close" id="close-btn">
+     <span><i class="fa-regular fa-x"></i> close</span>
+      </div>
+    </div>
+    <div class="sidebar">
+    {% if link == 'dashboard'%}
+      <a href="{% url 'user-dashboard' %}" class="active">
+        <span><i class="fa-solid fa-circle-user"></i></span>
+        <h3>Dashboard</h3>
+      </a>
+      {% else %}
+
+      <a href="{% url 'user-dashboard' %}" class="">
+        <span><i class="fa-solid fa-circle-user"></i></span>
+        <h3>Dashboard</h3>
+      </a>
+      {% endif %}
+       {% if link == 'Opportunity'%}
+      <a href="{% url 'Opportunity' %}" class="active">
+        <span><i class="fa-solid fa-chart-line"></i></span>
+        <h3>Opportunities</h3>
+      </a>
+       {% else %}
+       
+       <a href="{% url 'Opportunity' %}" class="" >
+        <span><i class="fa-solid fa-chart-line"></i></span>
+        <h3>Opportunities</h3>
+      </a>
+      {% endif %}
+      <a href="{% url 'profile' %}">
+        <span><i class="fa-solid fa-bars-progress"></i></span>
+        <h3>Management</h3>
+      </a>
+      <a href="">
+        <span><i class="fa-solid fa-comments"></i></span>
+        <h3>Messages</h3>
+        <span class="message-count">25</span>
+      </a>
+      <a href="">
+        <span><i class="fa-solid fa-handshake-angle"></i></span>
+        <h3>Proposals</h3>
+      </a>
+      <a href="">
+        <span><i class="fa-solid fa-money-bill"></i></span>
+        <h3>Payments</h3>
+      </a>
+      <a href="">
+        <span><i class="fa-solid fa-address-book"></i></i></span>
+        <h3>Analytics</h3>
+      </a>
+      <a href="">
+        <span><i class="fa-solid fa-gear fa-spin-pulse"></i></span>
+        <h3>Settings</h3>
+      </a>
+      <a href="">
+        <span><i class="fa-solid fa-user-tie"></i></span>
+        <h3>Add Resume</h3>
+      </a>
+      <a href="">
+        <span><i class="fa-solid fa-comments-dollar"></i></span>
+        <h3>Feedback</h3>
+      </a>
+      <a href="{% url 'login' %}">
+        <span><i class="fa-solid fa-right-from-bracket"></i></span>
+        <h3>Logout</h3>
+      </a>
+    </div>
+  </aside>
+  {% endblock %}
+  <main> 
+    <h1>
+      {% block title %} 
+      Dashboard
+      {% endblock %}
+    </h1>
+    {% block body-content %}
+    {% endblock %}
+  </div>
+  </main>
+</body>
+<script src="{% static '/Js/dashboard.js' %}"></script>
+</html>
+

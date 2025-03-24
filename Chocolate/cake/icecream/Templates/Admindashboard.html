@@ -1,0 +1,88 @@
+{% extends 'layouts/base_layout.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN DASHBOARD</title>
+</head>
+<body>
+    {% block body-content %}
+    <section>
+        <h2>Customers</h2>
+
+        <div class="row" style="display: flex;padding: 15px;justify-content: space-between;align-items: center">
+            {% for freelance in freelancer %}   
+                <div style="background: #f8f8ff7a;box-shadow: 1px 1px 6px rgba(12,12,12,0.3);padding: 10px;border-radius: 6px;margin-left: 10px;margin-right: 10px;">
+                        <p>User Name : <span>{{ freelance.user.username }}</span></p>
+                        <p> NIN  : <span>{{ freelance.id }}</span> </p>
+                        <p> Account Balance : <span style="color: green">NGN</span><span style="letter-spacing: 1.2px;color: black;">{{ freelance.balance }}</span></p>
+                    </div>
+            {% endfor %}
+            </div>
+
+
+    </section>
+    <section>
+        <h2>Jobs</h2>
+
+        <div class="row" style="display: flex;padding: 15px;justify-content: space-between;align-items: center">
+            {% for job in Jobs %}   
+                <div style="background: #f8f8ff7a;box-shadow: 1px 1px 6px rgba(12,12,12,0.3);padding: 10px;border-radius: 6px;margin-left: 10px;margin-right: 10px;">
+                        <p>User Name : <span>{{ job.title }}</span></p>
+                        <p> NIN  : <span>{{ job.description }}</span> </p>
+                        <p> NIN  : <span>{{ job.company}}</span> </p>
+                        <p> Salary : <span style="color: green">NGN</span><span style="letter-spacing: 1.2px;color: black;">{{ job.balance }}</span></p>
+                    </div>
+            {% endfor %}
+            </div>
+
+
+    </section>
+    <section>
+        <h2>Company</h2>
+
+        <div class="row" style="display: flex;padding: 15px;justify-content: space-between;align-items: center">
+            {% for company in company %}   
+                <div style="background: #f8f8ff7a;box-shadow: 1px 1px 6px rgba(12,12,12,0.3);padding: 10px;border-radius: 6px;margin-left: 10px;margin-right: 10px;">
+                        <p>User Name : <span>{{company.name }}</span></p>
+                        <p>User Name : <span>{{company.id }}</span></p>
+                    </div>
+            {% endfor %}
+            </div>
+
+
+    </section>
+    <div class="contianer">
+    <div class="apply">
+ {% for job in Jobs %}
+            <h2>Apply for Other Jobs</h2>
+          
+          <table>
+            <thead>
+              <tr>
+                <th>Company name</th>
+                <th>Post</th>
+                <th>Salary</th>
+                <th>Status</th>
+                <th>Apply</th>
+              </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>{{ job.company}}</td>
+              <td>{{ job.title }}</td>
+              <td>{{ job.balance }}</td>
+              <td><a href="#">requirment</a></td>
+              <td><button>Apply</button></td>
+            </tr>
+           
+          </table>
+          <a href="#">More</a>
+           {% endfor %}
+           </div>
+    <div>
+</body>
+</html>
+{% endblock %}  
